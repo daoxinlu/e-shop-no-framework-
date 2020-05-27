@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a-switch{
+            width: 60px;
+            height: 30px;
+            border-radius: 20px;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; 
+            background-color: #e0e0e0;
+            /* box-shadow: #c2c2c2 0 0 0 0 inset; */
+            position: relative;
+            transition:0.4s;
+        }
+        .a-switch:after{
+            content: '';
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            background-color: #fff;
+            /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);  */
+            position: absolute;
+            left:0;
+            top:1px;
+            transition:0.3s;
+        }
+        .a-switch:checked{
+            
+            /* box-shadow: #83e482 0 0 0 14px inset; */
+            background-color: #81d480; 
+        }
+        .a-switch:checked:after{
+            left:32px;
+        }
+  </style>
+</head>
+<body>
+    <div id="box">
+        <label for=""><input type="checkbox" name="" id="" class="a-switch"></label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+body{
+    margin:0px;
+    border:0;
+    background-color: rgb(253, 253, 245);
+    min-width:1000px;
+    height:10000px;
+    
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    color:black;
+    margin:2px 5px;
+}
+
+.fixed-bar{
+    top:0px;
+    width:100%;
+    height:50px;
+    background-color: white;
+    position:fixed;
+    visibility:hidden;
+    z-index:100;
+}
+.top-bar{
+    position:relative;
+    line-height: 36px   ;
+    height:36px;
+    width:100%;
+    background-color: rgb(164, 170, 175);
+    overflow: hidden;
+}
+.site{
+    position:relative;
+    left:30%;
+    font-size: small;
+}
+.a-top{
+    display: inline-block;
+    position:relative;
+    left:64%;
+    background-color: rgb(164, 170, 175);
+    font-size: small;
+    
+}
+.split-line{
+    margin:0 5px;
+    width:1px;
+    height:16px;
+    background-color:rgb(97, 97, 97);
+    top:3px;
+}
+.profile-div{
+    position:absolute;
+    top:36px;
+    left:64%;
+    background-color: rgb(164, 170, 175);
+    width:240px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.p-a{
+    display: inline-block;
+    color:black;
+    font-size:small;
+    width:100px;
+    margin:10px;
+    text-align: left;
+    /* border:10px 10px; 无用*/
+}
+.select-options{
+    width:80px;
+}
+.banner-bar{
+    position:relative;
+    background-color: thistle;
+    width:100%;
+    height:164px;
+    
+}
+.banner-bar-children{
+    display:inline-block;
+}
+.logo{
+    position: relative;
+    left:10%;
+    top:10%;
+}
+.logo>img{
+    
+    border-radius:64px;
+    height:128px;
+    width:128px;
+}
+.search-bar{
+    position:absolute;
+    left:50%;
+    top:50%;
+    height:40px;
+    text-align:center;
+    
+    width:500px;
+    transform: translate(-50%,-50%);
+    border:2px solid red;
+}
+.search-inp{
+    position: relative;
+    float: left;
+    width:400px;
+    border:0px;
+    
+    height:40px;
+    padding:0;
+}
+.search-inp:focus{
+    
+    outline: none;
+}
+.serach-btn{
+    height:100%;
+    float:right;
+    width:100px;
+    background-color: red;
+    border-color:red;
+    line-height:40px;
+    user-select: none;
+}

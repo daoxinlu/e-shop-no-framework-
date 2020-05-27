@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/cookie.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div id="app">
+        <form action="./static/blog.html" method="get">
+            <div id="login_text">用户登录</div>
+            <input type="text" id="username" class="input" placeholder="用户名">
+            <input type="password" id="pwd" class="input" placeholder="密码"><br>
+            <div class="container"><input type="checkbox" id="remember" class="checkbox" checked="checked">
+                <label for="remember">记住我</label>
+                <span><a href="javascript:void(0);" class="forget">忘记用户名或密码</a></span><br>
+            </div>
+            <button class="input btn" id="user_login" onclick="return set_update_cookie()">授权并登录</button>
+        </form>
+        <span id="sign_up">没有账号？<a href="javascript:void(0);">立即注册</a></span>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;width:100%;
+    
+}
+.container{
+    width:100%;height:100%;
+}
+.navbar{
+    width:100%;height:10%;background-color: orange;border:1px solid black;
+}
+.menu_content{
+    width:100%;height:80%;display:flex;
+}
+.menu{
+    width:25%;height:100%;background-color: lawngreen;
+}
+.content{
+    width:75%;height:100%;background-color: lightseagreen;
+}
+.bottom{
+    width:100%;height:10%;background-color: lightsteelblue;
+}

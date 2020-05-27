@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/svg/iconfont.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部栏复用 -->
+        <div class="top-bar">
+            <span class="site">
+                <i class="iconfont">&#xe635;</i>位置
+            </span>
+            <a href="#" class="a-top" id="profile">个人中心</a>
+            <span class="split-line a-top"></span>
+            <a href="#" class="a-top">我的订单</a>
+            <span class="split-line a-top"></span>
+            <a href="#" class="a-top ">购物车</a>
+            <span class="split-line a-top"></span>
+            <select class="a-top select-options" onchange="window.location=this.value" >
+                <option value="">售后服务</option>
+                <option value="#">网址导航</option>
+                <option value="#">客服电话</option>
+                <option value="#">满意度调查</option>
+                <option value="#">自助系统</option>
+            </select>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="banner-bar">
+            <div class="logo banner-bar-children">
+                <img src="../src/img/logo.png" alt="logo" title="欢迎">
+                <div class="banner-bar-cart"><span>购物车</span></div>
+            </div>
+            
+            <div class="search-bar banner-bar-children">
+                <input placeholder="搜索栏" class="search-inp">
+                <span class='serach-btn' id="search-btn">按钮</span>
+            </div>
+        </div>
+
+        <!-- 购物车物品展示 -->
+        <div class="cart">
+            <div class="cart-filter">
+                <div class="cart-filter-bar">
+                    <a href="#"><span>全部商品</span><span id="cart_count">24</span></a>
+                </div> 
+            </div>
+            <div class="cart-warp">
+                <div class="cart-wrap-top">
+                    <input  type="checkbox" name="all_goods" id="all_goods">
+                    <label  class="cart-wrap-item-select" for="all_goods">全选</label>
+                    <div><span>商品</span></div>
+                    <div></div>
+                    <div class="per-sale-price"><span>单价</span></div>
+                    
+                    <div class="per-goods-count"><span>数量</span></div>
+                    <div class="per-sale-count"><span>小计</span></div>
+                    <div class="good-operate"><span>操作</span></div>
+
+                </div>
+                <div class="cart-wrap-itemlist">
+                    <div class="cart-wrap-item">
+                        <div>
+                            <input type="checkbox" name="single_good" id="good_1" class="cart-wrap-item-inp">
+                        </div>
+                        <div class="good-img-small"></div>
+                        <div class="good-item">
+                            <a href="#" class="good-item-state">
+                                惠普（HP）战66 三代 AMD版14英寸轻薄笔记本电脑（锐龙7nm 六核R5-sdfdafadfadfadsf打飞机按时付款假按揭开发
+                            </a>
+                            <a href="#">۞<span class="good-item-server">挑选服务</span></a>
+                        </div>
+                        <!-- 详细说明暂时不写 -->
+                        <div class="good-description">说明</div>
+                        <div class="good-per-price">
+                            <span>$</span><span id="per-price">20.00</span>
+                        </div>
+                        <div class="good-count">
+                            <button id="count_sub">-</button>
+                            <input type="text" class="good-count-input" value=1 id="">
+                            <button id="count_add">+</button>
+                        </div>
+                        <div class="good_price_count">
+                            <span>$</span><span id="small_count"></span>
+                        </div>
+                        <div class="good-item-operate">
+                            <a href="#">删除此商品</a>
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                    </div>
+                    <div class="cart-wrap-item">
+                        <div>
+                            <input type="checkbox" name="single_good" id="good_1" class="cart-wrap-item-inp">
+                        </div>
+                        <div class="good-img-small"></div>
+                        <div class="good-item">
+                            <a href="#" class="good-item-state">
+                                惠普（HP）战66 三代 AMD版14英寸轻薄笔记本电脑（锐龙7nm 六核R5-sdfdafadfadfadsf打飞机按时付款假按揭开发
+                            </a>
+                            <a href="#">۞<span class="good-item-server">挑选服务</span></a>
+                        </div>
+                        <!-- 详细说明暂时不写 -->
+                        <div class="good-description">说明</div>
+                        <div class="good-per-price">
+                            <span>$</span><span id="per-price">30.00</span>
+                        </div>
+                        <div class="good-count">
+                            <button id="count_sub">-</button>
+                            <input type="text" class="good-count-input" value=1 id="">
+                            <button id="count_add">+</button>
+                        </div>
+                        <div class="good_price_count">
+                            <span>$</span><span id="small_count"></span>
+                        </div>
+                        <div class="good-item-operate">
+                            <a href="#">删除此商品</a>
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                    </div>
+
+                    <!-- 合计 -->
+                    <div class="cart-summary">
+                        <div>
+                            <div>
+                            <span>已选<span class="cart-summary-count"></span>件商品</span>
+                            </div>
+                            <div ><span>总价：￥</span><span class="cart-summary-price"></span></div>
+                            <div><span class="cart-balance">去付款</span></div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .cart-summary{
+                            margin-top:100px;
+                            width:100%;
+                            height:64px;
+                            background-color: antiquewhite;
+                            
+                        }
+                        .cart-summary>div{
+                            float:right;    
+                        }
+                        .cart-summary>div>div{
+                            display:inline-block;
+                            margin-left:10px;
+                            height:100%;
+                            line-height:64px;
+                        }
+                        .cart-balance{
+                            display: inline-block;
+                            height:64px;
+                            width:72px;
+                            background-color: red;
+                            outline: none;
+                            user-select: none;
+                            cursor: pointer;
+                            text-align: center;
+                            color:white;
+                            font-weight: bold;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .cart{
+            position: relative;
+            width:1000px;
+            left:50%;
+            transform: translateX(-50%);
+        }
+        .cart-filter{    
+        }
+        .cart-filter-bar{
+            font-size: large;
+            font-weight:500;
+            letter-spacing:0.1em;
+            margin:10px 0;
+            background-color: rgb(240, 218, 190);
+            padding:10px 0;
+            
+        }
+        .cart-filter-bar>a{
+            color:red;
+        }
+        .cart-warp{
+            padding-top:20px;
+            background-color: rgb(219, 216, 211);
+        }
+        .cart-wrap-top{
+            display:flex;
+        }
+        .cart-wrap-item{
+            margin:10px 0;
+            background-color: bisque;
+        }
+        .cart-wrap-item-select{
+            margin-right:50px;
+        }
+        .cart-wrap-top>div{
+            text-align:right;
+            flex:1 1;
+        }
+        
+        .good-operate{
+            
+            padding:0 20px;
+        }
+        .cart-wrap-itemlist{
+            
+            margin:10px 0;
+            height:118px;
+        }
+        .cart-wrap-item{
+            height:100px;
+            display:flex;
+            position: relative;
+            top:18px;
+            
+        }
+        .car-wrap-item>button{
+            outline: none;
+            padding:0;
+        }
+        .cart-wrap-item-inp{
+            margin:20px 0 0 10px;
+            outline: none;
+            padding:0;
+        }
+        .good-img-small{
+            width:72px;
+            height:72px;
+            background-color: yellowgreen;
+            margin:0 20px;
+            
+        }
+        .good-item{
+            width:160px;
+            height:100%;
+            font-size: small;
+        }
+        .good-item>a{
+            /* 在下面设置盒子无用 */
+            display: -webkit-box;
+            margin-top:10px;
+            
+        }
+        .good-item-server{
+            color:gray;
+            padding:0 5px;
+        }
+        .good-item-state{
+            width: 100%;
+            word-break: break-all;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            
+            /* text-overflow: ellipsis; */
+        }
+        .good-description{
+            width:128px;
+            text-align: center;
+        }
+        .good-per-price{
+            
+            position:relative;
+            left:30px;
+            width:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .good-per-price>span{
+            text-align: center;
+        }
+        .good-count{
+            position:relative;
+            left:40px;
+            width:180px;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .good-count-input{
+            width:60px;
+            margin:0;
+            text-align: center;
+        }
+        .good_price_count{
+            width:180px;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .good-item-operate{
+            position:relative;
+        }
+        .good-item-operate>a{
+            position: relative;
+            top:20px;
+            left:25px;
+            display:block;
+            font-size: small;
+            margin-top:5px;
+        }
+    </style>
+    <script src="../js/common.js"></script>
+    <script>
+        
+        var good_count_input  = document.getElementsByClassName("good-count-input")
+        //计算单件价格
+        window.onload = function(){
+                for(var i=0;i<good_count_input.length;i++){
+                    var price = (good_count_input[i].value*good_count_input[i].parentNode.previousElementSibling.childNodes[2].innerText).toFixed(2)
+                    good_count_input[i].parentNode.nextElementSibling.childNodes[2].innerText = price
+                }
+        }
+        for(var i=0;i<good_count_input.length;i++){
+            
+            good_count_input[i].previousElementSibling.addEventListener('click',(e)=>{
+                if(e.target.nextElementSibling.value!=0){
+                    e.target.nextElementSibling.value -=1
+                    var price = e.target.parentNode.previousElementSibling.childNodes[2].innerText * e.target.nextElementSibling.value
+                    e.target.parentNode.nextElementSibling.childNodes[2].innerText = price.toFixed(2);
+                }else {
+                    console.log('当前该商品数量为0')
+                }
+            });
+            good_count_input[i].addEventListener('input',(e)=>{
+                e.target.value = e.target.value.replace(/[^\d]/g,'')
+                
+            })
+            good_count_input[i].addEventListener('keyup',(e)=>{
+                
+                var price = e.target.value * e.target.parentNode.previousElementSibling.childNodes[2].innerText
+                e.target.parentNode.nextElementSibling.childNodes[2].innerText = price.toFixed(2);
+            })
+            good_count_input[i].nextElementSibling.addEventListener('click',(e)=>{
+                e.target.previousElementSibling.value = parseInt(e.target.previousElementSibling.value)+1;  //为什么减法不需要转数字
+                var price = e.target.parentNode.previousElementSibling.childNodes[2].innerText * e.target.previousElementSibling.value
+                e.target.parentNode.nextElementSibling.childNodes[2].innerText = price.toFixed(2);
+            })
+        }
+        //计算总价
+
+    </script>
+</body>
+</html>

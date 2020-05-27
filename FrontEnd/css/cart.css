@@ -1,0 +1,26 @@
+.logo{
+    position: relative;
+    left:20%;
+    top:10%;
+}
+.search-bar{
+    position:absolute;
+    left:60%;
+    top:50%;
+    height:40px;
+    text-align:center;
+    width:500px;
+    transform: translateY(-50%);
+    border:2px solid red;
+}
+.banner-bar-cart{
+    position: absolute;
+    top:30%;
+    width:100px;
+    height:100px;
+    
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: 500;
+    color:red;
+}
