@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/svg/iconfont.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <title>商品搜索结果</title>
+</head>
+<body>
+    <div class="container">
+        <div class="fixed-bar" id="fixed-bar">
+            <div class="search-bar banner-bar-children">
+                <input placeholder="搜索栏" class="search-inp">
+                <span class='serach-btn' id="search-btn">按钮</span>
+            </div>
+        </div>
+        <div class="top-bar">
+            <span class="site">
+                <a href="./home.html">首页</a><i class="iconfont">&#xe635;</i>位置
+            </span>
+            <a href="#" class="a-top" id="profile">个人中心</a>
+            <span class="split-line a-top"></span>
+            <a href="#" class="a-top">我的订单</a>
+            <span class="split-line a-top"></span>
+            <a href="#" class="a-top ">购物车</a>
+            <span class="split-line a-top"></span>
+            <select class="a-top select-options" onchange="window.location=this.value" >
+                <option value="">售后服务</option>
+                <option value="#">网址导航</option>
+                <option value="#">客服电话</option>
+                <option value="#">满意度调查</option>
+                <option value="#">自助系统</option>
+            </select>
+        </div>
+        <div class="banner-bar">
+            <div class="logo banner-bar-children">
+                <img src="../src/img/logo.png" alt="logo" title="欢迎">
+            </div>
+            <div class="search-bar banner-bar-children">
+                <input placeholder="搜索栏" class="search-inp">
+                <span class='serach-btn' id="search-btn">按钮</span>
+                
+            </div>
+            
+            <a href="./cart.html" class="to-cart" data-count="2">去购物车</a>
+            
+        </div>
+        <script src="../js/common.js"></script>
+</body>
+</html>
