@@ -1,10 +1,10 @@
     //搜索栏
-    var search = document.getElementById('search-btn')
-    var count = 0;
-    search.onclick = function(){
-        count++;
-        console.log('click:'+count+'次')
-    }
+    // var search = document.getElementsByClassName('search-btn')
+    // var count = 0;
+    // search.onclick = function(){
+    //     count++;
+    //     console.log('click:'+count+'次')
+    // }
     //轮播,需要后端数据格式配合
     var lunbo = document.getElementById('lunbo')
     var item_list = document.getElementsByClassName('item-list')[0]

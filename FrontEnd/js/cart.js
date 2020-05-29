@@ -130,6 +130,12 @@ function calc_price(){
     all_goods_price.innerText = total_price.toFixed(2)
     cart_summary_count.innerText = all_goods_count
     cart_count.innerText = String(good_count_input.length).replace(/[^\d]/g,'');
+    //判断此时是否处于全选状态，然后做相应的变化
+    if(checked_arr.every((item)=>item==true)){
+        all_goods.checked = true;
+    }else{
+        all_goods.checked = false;
+    }
 }
 
 //处理删除商品

@@ -1,4 +1,4 @@
-var profile = document.getElementById('profile')
+    var profile = document.getElementById('profile')
     var profileDiv = document.createElement('div');
     profileDiv.setAttribute('class','profile-div')
     var a1 = document.createElement('a')
@@ -38,4 +38,17 @@ var profile = document.getElementById('profile')
     }
     function showDiv(){
         profileDiv.style.display = 'flex';
+    }
+
+    //搜索按钮
+    var search_btn = document.getElementsByClassName('search-btn')
+    
+    for(var i=0;i<search_btn.length;i++){
+        search_btn[i].addEventListener('click',search_good);
+    }
+    
+    
+    
+    function search_good(){
+        console.log('searching...')
     }

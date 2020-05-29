@@ -3,8 +3,6 @@ body{
     border:0;
     background-color: rgb(253, 253, 245);
     min-width:1000px;
-    height:10000px;
-    
 }
 a{
     text-decoration: none;
@@ -121,7 +119,7 @@ li{
     
     outline: none;
 }
-.serach-btn{
+.search-btn{
     height:100%;
     float:right;
     width:100px;
@@ -129,4 +127,36 @@ li{
     border-color:red;
     line-height:40px;
     user-select: none;
+    cursor: pointer;
+}
+.to-cart{
+    position: absolute;
+    left:78%;
+    top:50%;
+    width:120px;
+    height:40px;
+    transform: translateY(-50%);
+    background-color: white;
+    font-weight:800;
+    color:red;
+    font-size:16px;
+    text-align: center;
+    line-height:40px;
+    box-shadow:0 0 1px 2px red;
+}
+.to-cart::before{
+    content:attr(data-count);
+    display: block;
+    position: absolute;
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    background-color:teal;
+    left:100px;
+    line-height:20px;
+    font-size:12px;
+    /* scale: 0.5; */
+    transform: scale(1.2);
+    color:black
+    
 }

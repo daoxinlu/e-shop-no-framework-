@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/svg/iconfont.css">
-    <link rel="stylesheet" href="../css/home.css">
+    
     <link rel="stylesheet" href="../css/common.css">
-    <title>商品搜索结果</title>
+    <title>商品详情</title>
 </head>
 <body>
     <div class="container">
         <div class="fixed-bar" id="fixed-bar">
             <div class="search-bar banner-bar-children">
                 <input placeholder="搜索栏" class="search-inp">
-                <span class='serach-btn' id="search-btn">按钮</span>
+                <a class='search-btn' id="" href="result.html">搜索</a>
             </div>
         </div>
         <div class="top-bar">
             <span class="site">
-                <a href="./home.html">首页</a><i class="iconfont">&#xe635;</i>位置
+                <a href="./home.html"><i class="iconfont">&#xe8c6;</i>首页</a>
+                <i class="iconfont">&#xe635;</i>位置
             </span>
             <a href="#" class="a-top" id="profile">个人中心</a>
             <span class="split-line a-top"></span>
@@ -40,13 +41,194 @@
             </div>
             <div class="search-bar banner-bar-children">
                 <input placeholder="搜索栏" class="search-inp">
-                <span class='serach-btn' id="search-btn">按钮</span>
+                <a class='search-btn' id="" href="result.html">搜索</a>
                 
             </div>
             
             <a href="./cart.html" class="to-cart" data-count="2">去购物车</a>
             
         </div>
-        <script src="../js/common.js"></script>
+    </div>
+    <div class="good-item">
+        <div class="item-banner">
+            <div class="item-banner-w">
+                <div class="item-banner-w-left">>商品详情</div>
+                <div class="item-banner-w-right">
+                    <a href="#">联想京东自营旗舰店</a>
+                    <a href="#">联系客服</a>
+                    <a href="#"><span data-bookmark="" class="item-bookmark">☆★</span>关注店铺</a>
+                </div>
+            </div>
+        </div>
+        <div class="item-detail">
+            <div class="item-detail-img">
+                <img src="../src/img/10.jpg" alt="" class="detail-img">
+                <div class="detail-link">
+                    <a href="#">关注</a>
+                    <a href="#">对比</a>
+                    <a href="#">举报</a>
+                </div>    
+            </div>
+            <div class="item-detail-word">
+                <div class="item-detail-title">
+                    <a href="#">当季新品 联想(Lenovo)小新15锐龙版 全面屏高性能轻薄笔记本电脑(6核12线程R5-4600U 16G 512G 高色域 数字小键盘)银</a>
+                    
+                </div>
+                <div class="item-detail-activity">
+                    <span>
+                        【6.1开门红一步到位，价保618无须等待】Air14-2020性能版,
+                        升级MX350，全金属窄边框，预定立省500，到手价4999，
+                        手慢无（立即预定）(此商品不参加上述活动)
+                    </span>
+                </div>
+                <div class="item-detail-price" >
+                    <span>京 东 价</span><span>￥</span>
+                    <span class="detail-price" data-detail_price="4499.00[￥5999.00]"></span>
+                    <a href="#">预约说明</a>
+                </div>
+                <div class="send-address">
+                    <span>发 送 至</span><div class="address-list">贵州省锦屏县铜鼓镇<b></b></div>
+                    <div class="send-address-delivery">由<span class='delivery-side'>京东</span>配送发货</div>
+                </div>
+                <div class="choose-color">
+                    <div>选择颜色</div>
+                    <div>
+                        <a href="#"><i>红</i></a>
+                        <a href="#"><i>黄</i></a>
+                        <a href="#"><i>蓝</i></a>
+                        <a href="#"><i>绿</i></a>
+                        <a href="#"><i>青</i></a>
+                        <a href="#"><i>蓝</i></a>
+                        <a href="#"><i>紫</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .good-item{
+            background-color: darkgray;
+        }
+        .item-banner{
+            width:100%;height:36px;
+            background-color: aquamarine;
+        }
+        .item-banner-w{
+            width:72%;
+            /* width:1000px; */
+            height:100%;
+            background-color: azure;
+            margin:0 auto;
+            line-height:36px;
+            font-size:0.8rem;
+        }
+        .item-banner-w-left{
+            float:left;
+        }
+        .item-banner-w-right{
+            float:right;
+        }
+        .item-banner-w-right>a{
+            margin:0 10px;
+        }
+        .item-bookmark{
+            font-size:20px;
+            line-height:20px;
+        }
+        .item-detail{
+            position: relative;
+            width:72%;margin:0 auto;
+            margin-top:12px;
+            
+        }
+        .item-detail-img{
+            position:relative;
+            width:15rem;
+            height:20rem;
+            background-color: bisque;
+            /* overflow: hidden; */
+            /* float:left; */
+        }
+        .detail-img{
+            max-width:100%;
+            max-height:100%;
+            height:12rem;
+            cursor: pointer;
+        }
+        .detail-link{
+            position: absolute;
+            width:100%;
+            background-color: cornflowerblue;
+            bottom:20px;
+        }
+        .detail-link>a:nth-child(3){
+            float:right;
+        }
+        .item-detail-word{
+            margin-left:20rem;
+            margin-right:5rem;
+            background-color: white;
+            position:absolute;
+            top:0;
+            border-radius:10px;
+            padding:10px;
+            /* float:right; */
+            
+        }
+        .item-detail-title{
+            font-size:1.2rem;
+            font-weight:bold;
+        }
+        .item-detail-activity{
+            font-size:0.8rem;
+            color:red;
+        }
+        .item-detail-price{
+            display:flex;
+            margin:1rem;
+        }
+        .item-detail-price>a{
+            position: absolute;
+            right:10rem;
+        }
+        .detail-price::after{
+            content:attr(data-detail_price)
+        }
+
+        .address-list{
+            display: inline-block;
+            margin-left:20px;
+        }
+        .address-list>b{
+            transform: scaleY(0.5);
+        }
+        .address-list>b::before{
+            content:" V";
+            color:red;
+            
+        }
+        .send-address-delivery{
+            margin:20px;
+            margin-left:80px;
+        }
+        .delivery-side{
+            color:red;
+        }
+        .choose-color{
+            display:flex;
+        }
+        .choose-color>div:nth-child(1){
+            margin:20px;
+        }
+        .choose-color>div:nth-child(2){
+            margin:20px 100px;
+            font-size:0.8rem;
+        }
+        .choose-color>div:nth-child(2)>a{
+            margin:10px;
+            color:red
+        }
+    </style>
+    <script src="../js/common.js"></script>
 </body>
 </html>
